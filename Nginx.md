@@ -46,9 +46,10 @@ events{}
 ```javscript
 http{
     upstream backend{
-    server 127.0.0.1:2222
-    server 127.0.0.1:3333
-    server 127.0.0.1:4444
+    #ip_hash; // Use for sticky session based on ip address | default is round robin
+    server 127.0.0.1:2222;
+    server 127.0.0.1:3333;
+    server 127.0.0.1:4444;
     }
     server{
         listen 80;
