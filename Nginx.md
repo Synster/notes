@@ -31,10 +31,10 @@ events{}
 http{
     server{
         listen 8080;
-        root C:\BLKDeveloper\apps\html;
+        root C:\abc\apps\html;
 
         location /images {
-            root "H:/My Documents/My Pictures/";
+            root "H:/My Documents/My Pictures/"; // Note: quotes if you have space in your path
         }
     }
 }
