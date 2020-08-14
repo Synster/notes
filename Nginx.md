@@ -41,3 +41,26 @@ http{
 
 events{}
 ```
+
+## Simple Load Balancer (Uses Round Robin)
+```javscript
+http{
+    upstream backend{
+    server 127.0.0.1:2222
+    server 127.0.0.1:3333
+    server 127.0.0.1:4444
+    }
+    server{
+        listen 80;
+        
+        location / {
+        proxy_pass http://backend/
+        }
+        
+    }
+}
+
+events{}
+```
+
+
