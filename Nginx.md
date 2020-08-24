@@ -1,5 +1,5 @@
 # What is NGINX?
-NGINX is Web Server that can also act as a reverse Proxy Server, Gateway, Load Blancer and more.
+NGINX is Web Server written in C that can also act as a reverse Proxy Server, Gateway, Load Blancer and more.
 
 # Versions
 1. NGINX Opensource -> NGINX.org
@@ -64,4 +64,24 @@ http{
 events{}
 ```
 
+## Simple gRPC Server
+```
+http {
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent"';
+ 
+    server {
+        listen 80 http2;
+ 
+        access_log logs/access.log main;
+ 
+        location / {
+            # Replace localhost:50051 with the address and port of your gRPC server
+            # The 'grpc://' prefix is optional; unencrypted gRPC is the default
+            grpc_pass grpc://localhost:50051;
+        }
+    }
+}
+```
 
