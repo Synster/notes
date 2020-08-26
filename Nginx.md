@@ -1,5 +1,5 @@
 # What is NGINX?
-NGINX is Web Server written in C that can also act as a reverse Proxy Server, Gateway, Load Blancer and more.
+NGINX is Web Server written in C that can also act as a reverse Proxy Server, Gateway, Load Balancer and more.
 
 # Versions
 1. NGINX Opensource -> NGINX.org
