@@ -72,7 +72,7 @@ http {
                       '"$http_user_agent"';
  
     server {
-        listen 80 http2;
+        listen 8086 http2; // Avoid using standardised ports like 8080
  
         access_log logs/access.log main;
  
@@ -84,4 +84,29 @@ http {
     }
 }
 ```
+## Simple gRPC server with location routing
+```
+http {
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent"';
 
+    
+     server {
+        listen 8086 http2;
+ 
+        access_log logs/access.log main;
+ 
+        location /helloworld.Greeter{
+            grpc_pass grpc://localhost:50052;
+        }
+
+        location /routeguide.RouteGuide{
+            grpc_pass grpc://localhost:50051;
+        }
+    }
+    
+}
+
+events{}
+```
