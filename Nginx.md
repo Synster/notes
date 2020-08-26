@@ -65,6 +65,7 @@ events{}
 ```
 
 ## Simple gRPC Server
+[NGINX Reference](https://www.nginx.com/blog/nginx-1-13-10-grpc/)
 ```
 http {
     log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
