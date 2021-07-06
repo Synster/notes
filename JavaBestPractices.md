@@ -11,7 +11,7 @@
 
 ### Members
 For members (fields, methods, nested classes, and nested interfaces), there are four possible access levels
-• _private—The member is accessible only from the top-level class where it is declared.
-• package-private—The member is accessible from any class in the package where it is declared.
-• protected—The member is accessible from subclasses of the class where it is declared and from any class in the package where it is declared._
-• _public—The member is accessible from anywhere._
+1. private—The member is accessible only from the top-level class where it is declared.
+2. package-private—The member is accessible from any class in the package where it is declared.
+3. protected—The member is accessible from subclasses of the class where it is declared and from any class in the package where it is declared.
+4. public—The member is accessible from anywhere.
