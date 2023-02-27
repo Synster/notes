@@ -1,17 +1,17 @@
 # Microservices 
-	Small Autonomus services
+	Small Autonomous services
 	Deployed separately
-	Lousley Coupled and focussed on a single task
+	Loosely Coupled and focused on a single task
 	
 ## Advantages
-	Tech Hetrogenity
+	Tech Heterogeneity
 	Resilience
 	Scaling
 	Easy Deployments
 	Organization
 	
 ## Disadvantages
-	Interservices Communication
+	Inter services Communication
 		Handle exceptions/Timeouts from other services
 		Retries
 		Circuit breaking
@@ -25,13 +25,13 @@
 		Distributed logging
 	Maintenance
 	
-# Monliths
+# Monoliths
 	Single Application having all the services
 	Example 
 		Ecommerce App -> 
 			Inventory, 
 			Order, 
-			Payment & Bilings, 
+			Payment & Billings, 
 			Delivery, 
 			User Managements
 		
@@ -60,7 +60,7 @@
 	Example Stock
 	
 * Different model may have different meanings in different context * 
-**Louse Coupling**
+**Loose Coupling**
 	A change in one service should not require a change in another
 	
 **High Cohesion**
